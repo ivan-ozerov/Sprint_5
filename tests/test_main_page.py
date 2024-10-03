@@ -16,7 +16,9 @@ class TestMainPage():
 
         WebDriverWait(chrome_driver,3).until(EC.url_to_be(helper.MAIN_PAGE_URL))
         WebDriverWait(chrome_driver,3).until(EC.visibility_of_element_located(Locators.HEADER_TO_MAIN_PAGE_CONSTRUCTOR_ACTIVE_STATE_LINK))
-        
+
+        assert 'link_active' in chrome_driver.find_element(*Locators.HEADER_TO_MAIN_PAGE_CONSTRUCTOR_LINK).get_attribute('class')
+
 
     def test_constructor_enter_from_profile_page_by_constructor_button(self, chrome_driver, login):
 
@@ -28,5 +30,8 @@ class TestMainPage():
 
         WebDriverWait(chrome_driver,3).until(EC.url_to_be(helper.MAIN_PAGE_URL))
         WebDriverWait(chrome_driver,3).until(EC.visibility_of_element_located(Locators.HEADER_TO_MAIN_PAGE_CONSTRUCTOR_ACTIVE_STATE_LINK))
+
+        assert 'link_active' in chrome_driver.find_element(*Locators.HEADER_TO_MAIN_PAGE_CONSTRUCTOR_LINK).get_attribute('class')
+
 
         

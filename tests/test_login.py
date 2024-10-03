@@ -63,3 +63,6 @@ class TestLogin():
         chrome_driver.find_element(*Locators.LOGIN_PAGE_LOGIN_BUTTON).click()
 
         WebDriverWait(chrome_driver, 3).until(EC.url_to_be(helper.MAIN_PAGE_URL))
+
+        assert chrome_driver.current_url == helper.MAIN_PAGE_URL
+        

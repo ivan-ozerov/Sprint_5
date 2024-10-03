@@ -15,3 +15,5 @@ class TestLogout:
         chrome_driver.find_element(*Locators.PROFILE_PAGE_LOGOUT_BUTTON).click()
 
         WebDriverWait(chrome_driver, 3).until(EC.url_to_be(helper.LOGIN_PAGE_URL))
+
+        assert chrome_driver.current_url == helper.LOGIN_PAGE_URL

@@ -17,9 +17,9 @@ def chrome_driver():
 @pytest.fixture
 def correct_credentials():
 
-    email = f"pirozok_s_kartoshkoi{random.randint(0, 1000)}@mail.ru"
+    email = f"pirozok_s_kartoshkoi{random.randint(0, 10000)}@mail.ru"
     login = "Artemii"
-    password = f"pirozok_s_kartoshkoi{random.randint(0, 1000)}"
+    password = f"pirozok_s_kartoshkoi{random.randint(0, 10000)}"
     correct_credentials = {
         'email' : email,
         'login' : login,
